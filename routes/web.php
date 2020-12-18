@@ -24,3 +24,7 @@ Route::get('/user', 'UserController@index')->name('user')->middleware('user');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
