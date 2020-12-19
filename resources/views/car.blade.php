@@ -16,8 +16,40 @@
 
 
 @section('content')
+<div class="card-body">
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div>
+    @endif
+      <form class="car-reg" method="post" action="{{ route('cars.store') }}">
+      <div class="login-box">
+      <h1>Car Details</h1>
+      <div class="textbox">
+              @csrf
+              <input type="text" id="car-brand" name="car_brand" placeholder="Car Brand">
+          </div>
 
-<form class="car-reg" action="web_actions.php" method="POST">
+          <div class="textbox">
+          <input type="text " id="numberplate" name="car_plate" placeholder="Number Plate">
+          </div>
+
+          <div class="textbox">
+          <input type="text" id="car-make" name="car_make" placeholder="Car Make">
+          </div>
+          <div class="center">
+          <button type="submit" name="car_reg_details" class="register-button">Register Car</button>
+</div>
+          <br>
+          </div>
+      </form>
+  </div>
+
+<!-- <form class="car-reg" action="web_actions.php" method="POST">
       <div class="login-box">
         <h1>Car Details</h1>
 
@@ -45,6 +77,6 @@
         </div>
        <br>
       </div>
-    </form>
+    </form> -->
 
 @endsection
