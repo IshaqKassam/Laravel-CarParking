@@ -16,18 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+
 
 Auth::routes();
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
 Route::get('/manager', 'ManagerController@index')->name('manager')->middleware('manager');
 Route::get('/user', 'UserController@index')->name('user')->middleware('user');
 
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('home', 'HomeController@index')->name('home');
 
-//Route::get('/cars', 'CarController@create')->name('cars');
+Route::get('/car', 'CarController@create')->name('car');
+Route::get('/index', 'CarController@index')->name('index');
 Route::resource('cars', 'CarController');

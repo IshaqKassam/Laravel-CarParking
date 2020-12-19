@@ -10,7 +10,10 @@ class CarController extends Controller
     // //
     public function index()
     {
-        return view('car');
+        
+        $cars_display = Car::all();
+
+        return view('index', compact('cars_display'));
     }
 
     public function create()
@@ -30,7 +33,32 @@ public function store(Request $request)
         return redirect('/cars')->with('success', 'Car successfully saved');
 }
 
+public function edit($id)
+{
+        $cars_display = Car::findOrFail($id);
 
+        return view('edit', compact('cars_display'));
+}
+
+public function update(Request $request, $id)
+{
+        $validatedData = $request->validate([
+            'car_brand' => 'required|max:255',
+            'car_plate' => 'required',
+            'car_make' => 'required',
+        ]);
+        Car::whereId($id)->update($validatedData);
+
+        return redirect('/cars')->with('success', 'Car Data is successfully updated');
+}
+
+public function destroy($id)
+{
+        $cars_display = Car::findOrFail($id);
+        $cars_display->delete();
+
+        return redirect('/cars')->with('success', 'Cars Data is successfully deleted');
+}
 
 
 

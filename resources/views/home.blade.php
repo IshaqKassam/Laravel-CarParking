@@ -6,16 +6,16 @@
         <div class="col-md-8">
             <div class="card">
                 <!-- <div class="card-header">{{ __('Dashboard') }}</div> -->
-
                 <div class="card-body">
-                    @if (session('status') == "iap@gmail.com")
+                    @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                    @yield('car')
-                    <a class="nav-link" href="{{ route('cars') }}">{{ __('Car') }}</a>
-                    <!-- {{ __('You are the Admin!') }} -->
+                    <a href="{{route('car')}}">Register a car</a><br>
+                    <a href="{{route('index')}}">View Report</a>
+
+                   
                 </div>
             </div>
         </div>
