@@ -203,6 +203,9 @@ box-shadow: 0 0 5px #50F1C3,
   .form .btn-reset{
       width: 300px;
   }
-  
-  
+  .status{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: blueviolet;
+  }
   
