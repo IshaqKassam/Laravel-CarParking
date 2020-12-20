@@ -38,23 +38,31 @@
                     </ul>  -->
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                        <!-- the login -->
+                            <!-- <li class="nav-item"> -->
+                                <div class="navigation">
+                                <ul class="nav-links">
+                                <li><a style="text-decoration:none"  href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                            <!-- </li> -->
+                            <!-- the register -->
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                <!-- <li class="nav-item"> -->
+                                    <li><a style="text-decoration:none" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                <!-- </li> -->
+                                </ul>
+                             </div>
                             @endif
                         @else
+                        <ul class="status">
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <!-- the username -->
+                                <a id="navbarDropdown" class="reg" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-                                
+                                <!-- the logout -->
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

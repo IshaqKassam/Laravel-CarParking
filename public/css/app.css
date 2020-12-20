@@ -1,3 +1,10 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(bg12.jpg) no-repeat;
+  background-size: cover;
+}
 .navbar-brand{
     text-align: center;
     color: rgb(161, 161, 228);
@@ -92,10 +99,10 @@
     0 0 300px rgb(241, 175, 113);
     }
       
-li a{
+/* li a{
     text-decoration: none;
     color: black;
-}
+} */
 /* 
 li{
     padding: 30px 35px;
@@ -203,6 +210,76 @@ box-shadow: 0 0 5px #50F1C3,
   .form .btn-reset{
       width: 300px;
   }
+  /* .status{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: blueviolet;
+  } */
+
+  .regButtons a{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    padding-top: 35px 30px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: 0.6s;
+    color: #68F181;
+    margin: 40px;
+    text-align: center;
+    
+    
+  }
+  .regButtons a:hover{
+    background: #4AAB65;
+    box-shadow: 0 0 5px #15B040,
+                0 0 25px #15B040,
+                0 0 50px #15B040,
+                0 0 200px #15B040,
+                0 0 250px #15B040,
+                0 0 300px #15B040;
+  }
+  .reg {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    padding-top: 35px 30px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: 0.6s;
+    color: #68F181;
+    margin: 40px;
+    text-align: center;
+    
+    
+  }
+  .nav-links {
+    list-style: none;
+  }
+  .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family:inherit;
+    color: rgb(241, 175, 113);
+
   
   
+  }
+  .nav-links li a {
+    
+    transition: all 0.3s ease 0s;
+  }
+  .nav-links li a:hover{
+    color: #0088a9;
+  } 
+  .navigation{
+    text-align: right;
+    color: rgb(241, 175, 113);
+  }
   
