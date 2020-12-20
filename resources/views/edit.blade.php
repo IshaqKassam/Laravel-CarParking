@@ -14,11 +14,11 @@
 <div>
 <p><a class="back" href="{{route('home')}}">back</a></p>
 </div>
-  <div class="card-header">
+  <!-- <div class="card-header">
     Edit Car Data
-  </div>
+  </div> -->
   <div class="error">
-    @if ($errors->any())
+    <!-- @if ($errors->any())
       <div class="error">
         <ul>
             @foreach ($errors->all() as $error)
@@ -26,7 +26,7 @@
             @endforeach
         </ul>
       </div><br />
-    @endif
+    @endif -->
 
     @if(session()->get('success'))
     <div class="alert">
@@ -44,13 +44,13 @@
           <div class="textbox">
               @csrf
               @method('PATCH')
-              <input type="text" placeholder="Car Brand" class="form-control" name="car_brand" value="{{ $cars_display->car_brand }}"/>
+              <input type="text" required placeholder="Car Brand" class="form-control" name="car_brand" value="{{ $cars_display->car_brand }}"/>
           </div>
           <div class="textbox">
-              <input type="text" placeholder="Car Plate" class="form-control" name="car_plate" value="{{ $cars_display->car_plate }}"/>
+              <input type="text" required placeholder="Car Plate" class="form-control" name="car_plate" value="{{ $cars_display->car_plate }}"/>
           </div>
           <div class="textbox">
-              <input type="text" placeholder="Car Make" class="form-control" name="car_make" value="{{ $cars_display->car_make }}"/>
+              <input type="text" required placeholder="Car Make" class="form-control" name="car_make" value="{{ $cars_display->car_make }}"/>
           </div>
           <button type="submit" class="register-button">Update Data</button>
         </div>

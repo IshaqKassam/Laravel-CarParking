@@ -32,15 +32,15 @@
       <h1>Car Details</h1> 
       <div class="textbox">
               @csrf
-              <input type="text" id="car-brand" name="car_brand" placeholder="Car Brand">
+              <input type="text" required id="car-brand" name="car_brand" placeholder="Car Brand">
           </div>
 
           <div class="textbox">
-          <input type="text " id="numberplate" name="car_plate" placeholder="Number Plate">
+          <input type="text " required id="numberplate" name="car_plate" placeholder="Number Plate">
           </div>
 
           <div class="textbox">
-          <input type="text" id="car-make" name="car_make" placeholder="Car Make">
+          <input type="text" required id="car-make" name="car_make" placeholder="Car Make">
           </div>
           <br>
           <div class="center">
