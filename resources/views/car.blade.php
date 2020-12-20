@@ -1,17 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <form class="form">
-    <h2>Register a Car Here</h2>
-</form>
-</body>
-</html> -->
 @extends('layouts.app')
 
 
@@ -26,9 +12,15 @@
         </ul>
       </div>
     @endif
+   
+    <!-- car registration form -->
+    <!-- form posts the car details to CarController in the store method-->
+    <div>
+    <p><a href="{{route('index')}}">View Cars</a></p>
+    </div>
       <form class="car-reg" method="post" action="{{ route('cars.store') }}">
       <div class="login-box">
-      <h1>Car Details</h1>
+      <h1>Car Details</h1> 
       <div class="textbox">
               @csrf
               <input type="text" id="car-brand" name="car_brand" placeholder="Car Brand">
@@ -41,9 +33,10 @@
           <div class="textbox">
           <input type="text" id="car-make" name="car_make" placeholder="Car Make">
           </div>
+          <br>
           <div class="center">
           <button type="submit" name="car_reg_details" class="register-button">Register Car</button>
-</div>
+          </div>
           <br>
           </div>
       </form>

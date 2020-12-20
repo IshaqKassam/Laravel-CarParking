@@ -34,4 +34,12 @@ Auth::routes();
 
 Route::get('/car', 'CarController@create')->name('car');
 Route::get('/index', 'CarController@index')->name('index');
+// Route::get('/index', 'CarController@index')->name('index');
 Route::resource('cars', 'CarController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('password/email', 'ForgotPasswordController@forgot');
+Route::view('forgot_password', 'auth.reset_password')->name('password.reset');
+Route::post('password/reset', 'ForgotPasswordController@reset');

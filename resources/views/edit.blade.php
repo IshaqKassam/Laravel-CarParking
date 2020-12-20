@@ -5,14 +5,21 @@
   .uper {
     margin-top: 40px;
   }
+
+  .error{
+    color: red;
+  }
 </style>
 <div class="card uper">
+<div>
+<p><a href="{{route('car')}}">Register a new Car</a></p>
+</div>
   <div class="card-header">
     Edit Car Data
   </div>
-  <div class="card-body">
+  <div class="error">
     @if ($errors->any())
-      <div class="alert alert-danger">
+      <div class="error">
         <ul>
             @foreach ($errors->all() as $error)
               <li>{{ $error }}</li>
@@ -24,15 +31,12 @@
           <div class="form-group">
               @csrf
               @method('PATCH')
-              <!-- <label for="country_name">Car Brand:</label> -->
               <input type="text" placeholder="Car Brand" class="form-control" name="car_brand" value="{{ $cars_display->car_brand }}"/>
           </div>
           <div class="form-group">
-              <!-- <label for="symptoms">Plate :</label> -->
               <input type="text" placeholder="Car Plate" class="form-control" name="car_plate" value="{{ $cars_display->car_plate }}"/>
           </div>
           <div class="form-group">
-              <!-- <label for="cases">Make :</label> -->
               <input type="text" placeholder="Car Make" class="form-control" name="car_make" value="{{ $cars_display->car_make }}"/>
           </div>
           <button type="submit" class="btn btn-primary">Update Data</button>

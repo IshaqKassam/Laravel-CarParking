@@ -175,6 +175,11 @@ box-shadow: 0 0 5px #50F1C3,
 	            
   0 0 300px rgb(241, 175, 113);
   }
+
+  .error{
+    color: red;
+    font-size: large;
+  }
   
   .form input{
     width: 100%;

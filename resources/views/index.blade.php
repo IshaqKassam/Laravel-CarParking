@@ -12,6 +12,10 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
+
+  <div>
+    <p><a href="{{route('car')}}">Register a new Car</a></p>
+    </div>
   <table class="table table-striped">
     <thead>
         <tr>
