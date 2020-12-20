@@ -30,7 +30,9 @@ public function store(Request $request)
         ]);
         $show = Car::create($validatedData);
    
-        return redirect('/car')->with('success', 'Car successfully saved');
+        // return redirect('/car')->with('success', "<script>alert('Car successfully saved')</script>");
+        return redirect('/car')->with('success', "Car successfully saved");
+
 }
 
 public function edit($id)

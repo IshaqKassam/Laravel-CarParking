@@ -8,8 +8,8 @@
 </style>
 <div class="uper">
   @if(session()->get('success'))
-    <div class="alert alert-success">
-      {{ session()->get('success') }}  
+    <div class="alert">
+     <script>alert ( "{{ session()->get('success') }}" ) </script>
     </div><br />
   @endif
 

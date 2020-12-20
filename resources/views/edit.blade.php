@@ -27,6 +27,17 @@
         </ul>
       </div><br />
     @endif
+
+    @if(session()->get('success'))
+    <div class="alert">
+      @php
+      $alert = ( session()->get('success') );
+      echo "<script>alert('$alert')</script>"
+      @endphp
+    
+    
+    </div><br />
+  @endif
       <form method="post" action="{{ route('cars.update', $cars_display->id ) }}">
         <div class="login-box">
         <h1>Edit Details</h1> 

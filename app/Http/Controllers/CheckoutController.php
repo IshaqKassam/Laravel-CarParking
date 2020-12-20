@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Checkout;
 use DB;
+use Car;
 
 class CheckoutController extends Controller
 {
@@ -41,7 +42,7 @@ public function store(Request $request)
                 $message = "Pay your Dues";
         }
         
-        return redirect('/cars')->with('success',$message);
+        return redirect('/car')->with('success',$message);
 }
 
 public function index()

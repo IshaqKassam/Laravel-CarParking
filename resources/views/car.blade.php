@@ -3,15 +3,24 @@
 
 @section('content')
 <div class="card-body">
-    @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
+    <!-- @if ($errors->any())
+      <div class="alert">
             @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
+              <script>alert($error)</script>
             @endforeach
-        </ul>
       </div>
-    @endif
+    @endif -->
+
+    @if(session()->get('success'))
+    <div class="alert">
+      @php
+      $alert = ( session()->get('success') );
+      echo "<script>alert('$alert')</script>"
+      @endphp
+    
+    
+    </div><br />
+  @endif
    
     <!-- car registration form -->
     <!-- form posts the car details to CarController in the store method-->

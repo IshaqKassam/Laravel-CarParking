@@ -374,3 +374,8 @@ tr:nth-child(even){
   padding: 5px;
 }
 
+.alert{
+  background-color: rgb(241, 175, 113);
+  
+}
+
