@@ -256,4 +256,46 @@ body{
     color: rgb(241, 175, 113);
     text-decoration:  rgb(241, 175, 113);
   }
-  
+.sidebar{
+    flex: 10;
+    width: 400px;
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+}
+
+.sidebar a{
+      position: relative;
+      display: inline-block;
+      align-items: center;
+      padding-top: 35px 30px;
+      text-decoration: none;
+      letter-spacing: 4px;
+      font-size: 24px;
+      border-radius: 15px;
+      text-transform: uppercase;
+      transition: 0.6s;
+      color:  rgb(241, 175, 113);
+      margin: 40px;
+      width: 300px;
+}
+
+.sidebar ul li{
+      padding: 30px 35px;
+      /* background-color: black; */
+      border-bottom: 2px solid grey;
+      list-style-type: none;
+      transition: 0.06s;
+}
+
+.sidebar ul li:hover{
+  box-shadow: 0 0 5px rgb(241, 175, 113),
+              
+              0 0 300px  rgb(241, 175, 113);
+  }

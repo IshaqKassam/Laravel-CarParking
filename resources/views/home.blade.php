@@ -12,18 +12,30 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="navigation">
-                    <ul class="nav-links">
-                    <li><a href="{{route('car')}}">Register a car</a></li>
-                    <li><a href="{{route('index')}}">View Report</a></li>
-                    </ul>
-                    </div>
-
-                   
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="sidebar">
+                        <ul>
+                            <li><a href="{{route('car')}}">Register a car</a></li>
+                            <li><a href="{{route('index')}}">View Report</a></li>
+                            <li><a href="{{route('checkout')}}">Car Checkout</a></li>
+                            <li> <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();"
+                                                    >
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" 
+                                    class="d-none">
+                                        @csrf
+                                    </form>
+                                    </li>
+                        </ul>
+                    </div>
 @endsection
 

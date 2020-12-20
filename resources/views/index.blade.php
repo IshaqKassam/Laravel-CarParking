@@ -14,7 +14,7 @@
   @endif
 
   <div>
-    <p><a href="{{route('car')}}">Register a new Car</a></p>
+    <p><a href="{{route('home')}}">Back</a></p>
     </div>
   <table class="table table-striped">
     <thead>

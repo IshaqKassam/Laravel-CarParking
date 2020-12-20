@@ -82,14 +82,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   Car Parking System
                 </div>
 
                 <div class="links">
                     
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/IshaqKassam/Laravel-CarParking">GitHub</a>
                 </div>
             </div>
         </div>

@@ -27,17 +27,17 @@
                         <!-- Authentication Links -->
                         @guest
                             <div class="navigation">
-                                <ul class="nav-links">
+                                    <ul class="nav-links">
                                         <li><a style="text-decoration:none "  href="{{ route('login') }}">
                                             {{ __('Login') }}</a>
                                         </li>                         
                                             @if (Route::has('register'))    
                                         <li><a style="text-decoration:rgb(241, 175, 113)" href="{{ route('register') }}">
-                                            {{ __('Register') }</a>
-                                        </li>                              
+                                    {{ __('Register') }}
+                                </a></li>                              
                                 </ul>
                             </div>
-                                            @endif
+                            @endif
                         @else
                 <div class="navigation">
                     <ul class="nav-links">
@@ -48,18 +48,24 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                 <!-- the logout -->
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <!-- <div class="sidebar">
+                                    <ul>
+                                        <li>
+                                        <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();"
+                                                    >
                                         {{ __('Logout') }}
                                     </a>
+                                        </li>
+                                    </ul>
+                                    
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" 
                                     class="d-none">
                                         @csrf
                                     </form>
                                     
-                                </div>
+                                </div> -->
                             </li>
                         @endguest
                     </ul>
