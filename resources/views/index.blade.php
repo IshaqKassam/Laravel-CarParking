@@ -13,40 +13,45 @@
     </div><br />
   @endif
 
-  <div>
-    <p><a href="{{route('home')}}">Back</a></p>
-    </div>
+        <div class="back">
+          <p><a href="{{route('home')}}">Back</a></p>
+        </div>
 
-    <div class="table-div">
-      <table class="table">
-        <thead>
-            <tr>
-              <td>ID</td>
-              <td>Car Brand  </td>
-              <td>Car Plate  </td>
-              <td>Car Make   </td>
-              <td class="outlined" colspan="2">Action</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($cars_display as $car)
-            <tr>
-                <td>{{$car->id}}</td>
-                <td>{{$car->car_brand}}</td>
-                <td>{{$car->car_plate}}</td>
-                <td>{{$car->car_make}}</td>
-                <td class="outlined"><a href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>
-                <td>
-                    <form action="{{ route('cars.destroy', $car->id)}}" method="post">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-danger" type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-      </table>
-  </div>
+        
+          
+        <div class="filter"> </div> 
+        
+
+          <table class="">
+            <thead>
+                <tr>
+                  <td>ID</td>
+                  <td>Car Brand  </td>
+                  <td>Car Plate  </td>
+                  <td>Car Make   </td>
+                  <td  colspan="2">Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($cars_display as $car)
+                <tr>
+                    <td>{{$car->id}}</td>
+                    <td>{{$car->car_brand}}</td>
+                    <td>{{$car->car_plate}}</td>
+                    <td>{{$car->car_make}}</td>
+                    <td class="outlined"><a href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>
+                    <td>
+                        <form action="{{ route('cars.destroy', $car->id)}}" method="post">
+                          @csrf
+                          @method('DELETE')
+                          <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+          </table>
+    
+  
 <div>
 @endsection
