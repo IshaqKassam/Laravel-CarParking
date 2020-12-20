@@ -37,6 +37,9 @@ Route::get('/index', 'CarController@index')->name('index');
 // Route::get('/index', 'CarController@index')->name('index');
 Route::resource('cars', 'CarController');
 
+Route::get('/checkout', 'CheckoutController@create')->name('checkout');
+Route::resource('checkouts', 'CheckoutController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

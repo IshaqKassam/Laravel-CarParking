@@ -18,24 +18,16 @@
     <div>
     <p><a href="{{route('index')}}">View Cars</a></p>
     </div>
-      <form class="car-reg" method="post" action="{{ route('cars.store') }}">
+      <form class="car-reg" method="post" action="{{ route('checkouts.store') }}">
       <div class="login-box">
-      <h1>Car Details</h1> 
+      <h1>Car Checkout</h1> 
       <div class="textbox">
               @csrf
-              <input type="text" id="car-brand" name="car_brand" placeholder="Car Brand">
-          </div>
-
-          <div class="textbox">
-          <input type="text " id="numberplate" name="car_plate" placeholder="Number Plate">
-          </div>
-
-          <div class="textbox">
-          <input type="text" id="car-make" name="car_make" placeholder="Car Make">
+              <input type="text" id="car-plate" name="car_plate" placeholder="Car Plate">
           </div>
           <br>
           <div class="center">
-          <button type="submit" name="car_reg_details" class="register-button">Register Car</button>
+          <button type="submit" name="car_reg_details" class="register-button">Checkout Car</button>
           </div>
           <br>
           </div>
