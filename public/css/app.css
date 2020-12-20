@@ -299,3 +299,26 @@ body{
               
               0 0 300px  rgb(241, 175, 113);
   }
+
+table{
+  background-color: beige;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+
+.table{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-items: center;
+}
+
+td {
+  padding: 10px 0;
+  border-bottom: 2px solid black;
+}
+
+.outlined{
+  border-left: 2px solid black;
+}
