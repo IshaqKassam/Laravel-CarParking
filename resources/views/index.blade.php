@@ -38,7 +38,7 @@
                     <td>{{$car->car_brand}}</td>
                     <td>{{$car->car_plate}}</td>
                     <td>{{$car->car_make}}</td>
-                    <td class="outlined"><a href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>
+                    <td class="outlined"><a style="text-decoration: none;" class="delete" href="{{ route('cars.edit', $car->id)}}" class="btn btn-primary">Edit</a></td>
                     <td>
                         <form action="{{ route('cars.destroy', $car->id)}}" method="post">
                           @csrf
