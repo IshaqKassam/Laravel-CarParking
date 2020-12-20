@@ -12,9 +12,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="regButtons">
-                    <a href="{{route('car')}}">Register a car</a><br>
-                    <a href="{{route('index')}}">View Report</a>
+                    <div class="navigation">
+                    <ul class="nav-links">
+                    <li><a href="{{route('car')}}">Register a car</a></li>
+                    <li><a href="{{route('index')}}">View Report</a></li>
+                    </ul>
                     </div>
 
                    
