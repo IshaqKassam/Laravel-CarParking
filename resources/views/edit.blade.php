@@ -12,7 +12,7 @@
 </style>
 <div class="card uper">
 <div>
-<p><a href="{{route('car')}}">Register a new Car</a></p>
+<p><a href="{{route('home')}}">back</a></p>
 </div>
   <div class="card-header">
     Edit Car Data
@@ -28,18 +28,21 @@
       </div><br />
     @endif
       <form method="post" action="{{ route('cars.update', $cars_display->id ) }}">
-          <div class="form-group">
+        <div class="login-box">
+        <h1>Edit Details</h1> 
+          <div class="textbox">
               @csrf
               @method('PATCH')
               <input type="text" placeholder="Car Brand" class="form-control" name="car_brand" value="{{ $cars_display->car_brand }}"/>
           </div>
-          <div class="form-group">
+          <div class="textbox">
               <input type="text" placeholder="Car Plate" class="form-control" name="car_plate" value="{{ $cars_display->car_plate }}"/>
           </div>
-          <div class="form-group">
+          <div class="textbox">
               <input type="text" placeholder="Car Make" class="form-control" name="car_make" value="{{ $cars_display->car_make }}"/>
           </div>
-          <button type="submit" class="btn btn-primary">Update Data</button>
+          <button type="submit" class="register-button">Update Data</button>
+        </div>
       </form>
   </div>
 </div>
