@@ -28,11 +28,11 @@
                         @guest
                             <div class="navigation">
                                     <ul class="nav-links">
-                                        <li><a style="text-decoration:none "  href="{{ route('login') }}">
+                                        <li><a class="login-right" style="text-decoration:none "  href="{{ route('login') }}">
                                             {{ __('Login') }}</a>
                                         </li>                         
                                             @if (Route::has('register'))    
-                                        <li><a style="text-decoration:rgb(241, 175, 113)" href="{{ route('register') }}">
+                                        <li><a class="register-right" style="text-decoration:rgb(241, 175, 113)" href="{{ route('register') }}">
                                     {{ __('Register') }}
                                 </a></li>                              
                                 </ul>
@@ -42,7 +42,7 @@
                 <div class="navigation">
                     <ul class="nav-links">
                             <li>
-                                    <a id="navbarDropdown" class="reg" href="#" role="button" 
+                                    <a id="navbarDropdown" class="reg" role="button" 
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>

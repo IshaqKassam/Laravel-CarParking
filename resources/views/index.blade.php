@@ -13,13 +13,12 @@
     </div><br />
   @endif
 
-        <div class="back">
-          <p><a href="{{route('home')}}">Back</a></p>
+        <div >
+          <p><a class="back" href="{{route('home')}}">Back</a></p>
         </div>
 
         
-          
-        <div class="filter"> </div> 
+  
         
 
           <table class="">
@@ -44,7 +43,7 @@
                         <form action="{{ route('cars.destroy', $car->id)}}" method="post">
                           @csrf
                           @method('DELETE')
-                          <button class="btn btn-danger" type="submit">Delete</button>
+                          <button class="delete" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>

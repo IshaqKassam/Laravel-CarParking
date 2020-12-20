@@ -12,7 +12,7 @@
 </style>
 <div class="card uper">
 <div>
-<p><a href="{{route('home')}}">back</a></p>
+<p><a class="back" href="{{route('home')}}">back</a></p>
 </div>
   <div class="card-header">
     Edit Car Data

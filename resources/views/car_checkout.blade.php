@@ -16,7 +16,7 @@
     <!-- car registration form -->
     <!-- form posts the car details to CarController in the store method-->
     <div>
-    <p><a href="{{route('home')}}">Back</a></p>
+    <p><a class="back" href="{{route('home')}}">Back</a></p>
     </div>
       <form class="car-reg" method="post" action="{{ route('checkouts.store') }}">
       <div class="login-box">
